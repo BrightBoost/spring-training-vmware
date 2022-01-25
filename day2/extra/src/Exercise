@@ -1,0 +1,14 @@
+Adjust the employee API in a way that:
+- we can get all the employees from the DB
+- store employees in the DB
+- modify employees that already exist
+- delete employees
+- get employees by property role sorted alphabetically
+
+Bonus:
+- give employees an object address
+- create a table for addresses
+- implement CRUD for addresses
+
+Bonus bonus:
+- how to store an employee with a new address all in one go?
