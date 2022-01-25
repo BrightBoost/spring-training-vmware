@@ -1,0 +1,10 @@
+Create a RestTemplate to consume a dummy api: https://dummy.restapiexample.com/
+- get all the employees
+- get a range of employee-id (say 11 to 15)
+
+Bonus:
+- can you do a post call?
+- idem delete call.
+
+Bonus bonus:
+- Can you do the same with HttpClient (java 11 feature)
