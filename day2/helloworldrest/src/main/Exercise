@@ -1,0 +1,12 @@
+Create an API for employees
+Create an endpoint to:
+- get all employees
+- get a specific employee
+- create a new employee
+- modify an employee
+- delete an employee
+(Store them in a list object)
+
+Bonus:
+- using a service
+- proper error handling for rest api's
