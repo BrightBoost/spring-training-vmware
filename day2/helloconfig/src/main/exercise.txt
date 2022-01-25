@@ -1,0 +1,7 @@
+Exercise with profiles
+
+- Create a datasource
+- Make sure it contains a driverclassname, url, username, pw
+- Create two config files containing a bean of type datasource
+- One of the config files is for dev and the other for production
+- Create the system in a way that we can alternate between these two config files
