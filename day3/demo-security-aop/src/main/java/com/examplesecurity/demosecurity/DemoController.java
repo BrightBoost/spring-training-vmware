@@ -11,8 +11,14 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @RestController
 public class DemoController {
+    public static List<String> list = new ArrayList<>(Arrays.asList("maria", "user", "admin"));
+
     @Autowired
     public DemoService demoService;
 
@@ -26,6 +32,14 @@ public class DemoController {
             currentUserName = authentication.getName();
         }
         return "Good morning " + currentUserName;
+    }
+
+    @Secured("ROLE_USER")
+    //this will remove all non matches from the list
+    @PostFilter("filterObject == authentication.name")
+    @GetMapping("/getuser")
+    public List<String> getSomeStuff() {
+       return list;
     }
 
     @GetMapping("/open")
