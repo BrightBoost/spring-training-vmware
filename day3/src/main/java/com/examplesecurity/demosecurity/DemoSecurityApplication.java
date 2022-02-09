@@ -2,8 +2,9 @@ package com.examplesecurity.demosecurity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication// (exclude = { SecurityAutoConfiguration.class }) // exclude the autoconfig class disables security
 public class DemoSecurityApplication {
 
     public static void main(String[] args) {
