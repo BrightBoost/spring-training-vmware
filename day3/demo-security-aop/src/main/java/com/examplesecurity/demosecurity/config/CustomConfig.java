@@ -29,17 +29,17 @@ public class CustomConfig extends WebSecurityConfigurerAdapter {
     }
 
     //authorization logic
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/open")
-                .permitAll()
-                .antMatchers("/admin")
-                .hasRole("ADMIN")
-                .anyRequest()
-                .authenticated()
-                .and()
-                .httpBasic();
-    }
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http
+//                .authorizeRequests()
+//                .antMatchers("/open")
+//                .permitAll()
+//                .antMatchers("/admin")
+//                .hasRole("ADMIN")
+//                .anyRequest()
+//                .authenticated()
+//                .and()
+//                .httpBasic();
+//    }
 }
