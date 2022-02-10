@@ -1,0 +1,12 @@
+Download Artemis: https://activemq.apache.org/components/artemis/download/
+
+copy folder to sensible location
+
+Navigate to apache-artemis-2.20.0/bin
+
+Execute: ./artemis create namebroker
+Execute what it outputs: "/Users/maaikevanputten/OneDrive/Documenten/trainingen/developintelligence/spring/day4/apache-artemis-2.20.0/bin/mybroker/bin/artemis-service" start
+
+Make sure the settings in application.properties match port and user name if not anonymous access enabled
+
+Now you can run the application
