@@ -18,6 +18,7 @@ import java.util.List;
 @RestController
 public class DemoController {
     public static List<String> list = new ArrayList<>(Arrays.asList("maria", "user", "admin"));
+    public List<User> users = new ArrayList<>();
 
     @Autowired
     public DemoService demoService;
@@ -39,7 +40,27 @@ public class DemoController {
     @PostFilter("filterObject == authentication.name")
     @GetMapping("/getuser")
     public List<String> getSomeStuff() {
+        System.out.println(list);
        return list;
+    }
+
+    @Secured("ROLE_USER")
+    //this will remove all non matches from the list
+    @PostFilter("filterObject.name == authentication.name")
+    @GetMapping("/getuserobject")
+    public List<User> getSomeStuffObjects() {
+        User user = new User();
+        user.setName("user");
+        user.setStreetName("blabla1");
+
+        User user1 = new User();
+        user1.setName("admin");
+        user1.setStreetName("blabla2");
+
+        users.add(user);
+        users.add(user1);
+
+        return users;
     }
 
     @GetMapping("/open")
